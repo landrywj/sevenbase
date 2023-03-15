@@ -25,7 +25,7 @@ class BlahsController < ApplicationController
 
     respond_to do |format|
       if @blah.save
-        format.html { redirect_to blah_url(@blah), notice: "Blah was successfully created." }
+        format.html { redirect_to blog_url(@blah.blog), notice: "Blah was successfully created." }
         format.json { render :show, status: :created, location: @blah }
       else
         format.html { render :new, status: :unprocessable_entity }

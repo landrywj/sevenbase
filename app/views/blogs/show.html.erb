@@ -1,10 +1,14 @@
-<p style="color: green"><%= notice %></p>
-
 <%= render @blog %>
 
-<div>
+<nav class="nav-pills">
   <%= link_to "Edit this blog", edit_blog_path(@blog) %> |
   <%= link_to "Back to blogs", blogs_path %>
+</nav>
+<hr>
+<section id="comments">
+<h3>Comments</h3>
+<%= render 'blahs/blog_form', blah: @blah %>
+<%= render @blog.blahs %>
+</section
 
-  <%= button_to "Destroy this blog", @blog, method: :delete %>
-</div>
+

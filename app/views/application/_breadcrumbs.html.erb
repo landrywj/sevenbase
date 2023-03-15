@@ -1,0 +1,7 @@
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/">Home</a></li>
+    <li class="breadcrumb-item"><%= link_to controller_name.capitalize, "/#{controller_name.pluralize}"%></li>
+    <li class="breadcrumb-item active"><%= action_name.capitalize %></li>
+  </ol>
+</nav>

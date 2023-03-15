@@ -1,22 +1,15 @@
-<div id="<%= dom_id blog %>">
-  <p>
-    <strong>Title:</strong>
+<article id="<%= dom_id blog %>">
+  <h2>
     <%= blog.title %>
-  </p>
+  </h2>
 
   <p>
-    <strong>Body:</strong>
     <%= blog.body %>
   </p>
 
-  <p>
-    <strong>Metadata:</strong>
-    <%= blog.metadata %>
-  </p>
+  <cite>
+    <strong>created_by:</strong>
+    <%= blog.user.email %>
+  </cite>
 
-  <p>
-    <strong>User:</strong>
-    <%= blog.user_id %>
-  </p>
-
-</div>
+</article>
