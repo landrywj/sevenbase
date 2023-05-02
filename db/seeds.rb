@@ -5,3 +5,6 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+User.create(email: 'tester@pipeline-e.com', password: 'password', password_confirmation: 'password')
+Room.create(name: 'Test Room', user_id: 1)
+Room.create(name: 'General Room', user_id: 1)

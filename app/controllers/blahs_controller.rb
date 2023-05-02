@@ -22,6 +22,7 @@ class BlahsController < ApplicationController
   # POST /blahs or /blahs.json
   def create
     @blah = Blah.new(blah_params)
+    @blah.user = current_user
 
     respond_to do |format|
       if @blah.save

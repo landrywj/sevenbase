@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :messages
+  resources :rooms
   # Defines the root path route ("/")
   root "application#home"
   get 'application/home', to: 'application#home', as: 'home'

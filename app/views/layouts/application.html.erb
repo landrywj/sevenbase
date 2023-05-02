@@ -12,10 +12,9 @@
   </head>
 
   <body class="container-fluid">
-  <%= render "application/master_nav" %>
-  <%= render "application/breadcrumbs" %>
-  <%= render "application/flash" %>
-
+    <%= render "application/master_nav" %>
+    <%= render "application/breadcrumbs" unless controller_name == "application"%>
+    <%= render "application/flash" %>
     <%= yield %>
   </body>
 </html>

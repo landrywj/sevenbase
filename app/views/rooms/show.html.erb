@@ -1,0 +1,15 @@
+
+<div id="<%= dom_id @room %>">
+<h1><%= @room.name %></h1>
+  <p>
+    <strong>Owner:</strong>
+    <%= @room.user.email%>
+  </p>
+  <%= render @room.messages %>
+</div>
+<nav class="nav">
+  <%= link_to "Edit this room", edit_room_path(@room) %> |
+  <%= link_to "Back to rooms", rooms_path %>
+
+  <%= button_to "Destroy this room", @room, method: :delete %>
+</nav>
