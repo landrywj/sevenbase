@@ -15,17 +15,12 @@
 </div>
 </header>
 <hr>
-<div class="row">
-  <div class="col">
-    <%= render "messages/form" %>
-  </div>
-  <div id="<%= dom_id @room%>" data-controller="messages" class="col">
+<div id="<%= dom_id @room%>" data-controller="messages" class="row">
     <%= turbo_stream_from dom_id @room %>
-  <div id="messages" data-message-target="container">
-     Live messages will appear here
+  <div id="messages" data-messages-target="container" class="col">
+    <%= render @room.messages %>
   </div>
-  <%= render @room.messages %>
-  </div>
+  <%= render "messages/form" %>
 </div>
 
 
