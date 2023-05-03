@@ -1,15 +1,28 @@
-
-<div id="<%= dom_id @room %>">
+<header class="row">
+<div class="col">
 <h1><%= @room.name %></h1>
   <p>
     <strong>Owner:</strong>
     <%= @room.user.email%>
   </p>
+  </div>
+  <div class="col">
+  <nav class="nav">
+    <%= link_to "Edit this room", edit_room_path(@room), class: 'nav-link nav-item' %> |
+  <%= link_to "Back to rooms", rooms_path, class: 'nav-link nav-item' %>
+  <%= button_to "Destroy this room", @room, method: :delete, class: 'btn btn-danger ml-auto' %>
+</nav>
+</div>
+</header>
+<hr>
+<div class="row">
+ <div class="col">
+  <%= render "messages/form" %>
+  </div>
+<div id="<%= dom_id @room %>" class="col">
+
   <%= render @room.messages %>
 </div>
-<nav class="nav">
-  <%= link_to "Edit this room", edit_room_path(@room) %> |
-  <%= link_to "Back to rooms", rooms_path %>
+</div>
 
-  <%= button_to "Destroy this room", @room, method: :delete %>
-</nav>
+

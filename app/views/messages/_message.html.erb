@@ -1,17 +1,7 @@
 <div id="<%= dom_id message %>">
+
   <p>
-    <strong>Body:</strong>
     <%= message.body %>
   </p>
-
-  <p>
-    <strong>User:</strong>
-    <%= message.user_id %>
-  </p>
-
-  <p>
-    <strong>Room:</strong>
-    <%= message.room_id %>
-  </p>
-
+  <cite><%= message.user.email if message.user %></cite>
 </div>
